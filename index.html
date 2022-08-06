@@ -6,10 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Lin Yi-Chi</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js' integrity='sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==' crossorigin='anonymous'></script>
+
 </head>
 <body>
     <h1>This is Yi-Chi's Website!!</h1>
-    <p>The content and my design project introduction.</p>
+    <div id="md"></div>
+
+
+    <script>
+        var converter = new showdown.Converter();
+        console.log("start");
+        $('#md').load('README.md');
+        setTimeout(()=>{
+            var md = $('div').text();
+            var html = converter.makeHtml(md);
+            $('#md').html(html);
+            console.log(html);
+            $('#md').css('visibility', 'visible');
+        },500);
+    </script>
     
 </body>
 </html>
