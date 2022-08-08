@@ -14,9 +14,9 @@
     font-size: 0.8em;
 }
 
-#footer a, #footer p {
-    margin: 7px 5px;
-    text-decoration: none;
-    color: #777;
-    display: inline-block;
-}
+    #footer a, #footer p {
+        margin: 7px 5px;
+        text-decoration: none;
+        color: #777;
+        display: inline-block;
+    }
